@@ -6,7 +6,7 @@ int main()
     // check if the array is a permutation
     int n, x;
     scanf("%d", &n);
-    int arr[n];
+  
     for (int i = 0; i < n; i++)
     {
         scanf("%d", &x);

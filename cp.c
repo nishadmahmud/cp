@@ -1,24 +1,25 @@
 #include <stdio.h>
 
+int arr[1000000007];
 int main()
 {
-    int n, peaks = 0;
+    // check if the array is a permutation
+    int n, x;
     scanf("%d", &n);
     int arr[n];
     for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-
-    if (arr[0] > arr[1] && arr[0] > arr[n - 1])
-        peaks++;
-
-    for (int i = 1; i < n - 1; i++)
     {
-        if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1])
-            peaks++;
+        scanf("%d", &x);
+        arr[x]++;
     }
-    if (arr[n - 1] > arr[n - 2] && arr[n - 1] > arr[0])
-        peaks++;
-
-    printf("%d\n", peaks);
+    for (int i = 1; i <= n; i++)
+    {
+        if (arr[i] != 1)
+        {
+            printf("Not a permutation\n");
+            return 0;
+        }
+    }
+    printf("Permutation\n");
     return 0;
 }

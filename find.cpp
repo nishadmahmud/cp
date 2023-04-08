@@ -1,15 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
-const long long m = 1e18;
+const int m = 1e9 + 7;
 bool arr[m];
 int main()
 {
-    int n;
+    int n, a;
     cin >> n;
-    int a[n];
     for (int i = 0; i < n; i++)
     {
-        cin >> a[i];
+        cin >> a;
+        arr[a] = true;
     }
     int x;
     cin >> x;

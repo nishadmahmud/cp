@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdbool.h>
+const int m = 1e9 + 7;
+int arr[m];
 int main()
 {
-    bool arr[1000000] = {0};
     int n, x, find;
     scanf("%d", &n);
     for (int i = 0; i < n; i++)

@@ -1,20 +1,17 @@
 #include <stdio.h>
-#include <stdbool.h>
-const int m = 1e9 + 7;
-int arr[m];
-int main()
-{
+
+int arr[1000000007];
+int main(){
     int n, x, find;
     scanf("%d", &n);
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++){
         scanf("%d", &x);
-        arr[x] = true;
+        arr[x] = i;
     }
     scanf("%d", &find);
     if (arr[find])
-        printf("YES\n");
+        printf("Found at index %d\n", arr[find]);
     else
-        printf("NO\n");
+        printf("Not found\n");
     return 0;
 }
